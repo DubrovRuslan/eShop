@@ -1,3 +1,4 @@
+using AutoMapper;
 using Catalog.Host.Data;
 using Catalog.Host.Repositories.Interfaces;
 using Catalog.Host.Services.Interfaces;
@@ -19,6 +20,16 @@ public class CatalogItemService : BaseDataService<ApplicationDbContext>, ICatalo
 
     public Task<int?> Add(string name, string description, decimal price, int availableStock, int catalogBrandId, int catalogTypeId, string pictureFileName)
     {
-        return ExecuteSafeAsync(() => _catalogItemRepository.Add(name, description, price, availableStock, catalogBrandId, catalogTypeId, pictureFileName));
+        return ExecuteSafeAsync(() => _catalogItemRepository.AddAsync(name, description, price, availableStock, catalogBrandId, catalogTypeId, pictureFileName));
+    }
+
+    public Task<bool?> Uddate(int id, string name, string description, decimal price, int availableStock, int catalogBrandId, int catalogTypeId, string pictureFileName)
+    {
+        return ExecuteSafeAsync(() => _catalogItemRepository.UpdateAsync(id, name, description, price, availableStock, catalogBrandId, catalogTypeId, pictureFileName));
+    }
+
+    public Task<bool?> Remove(int id)
+    {
+        return ExecuteSafeAsync(() => _catalogItemRepository.RemoveAsync(id));
     }
 }
