@@ -32,7 +32,7 @@ namespace Catalog.Host.Services
             return ExecuteSafeAsync(() => _catalogBrandRepository.RemoveAsync(id));
         }
 
-        public Task<bool?> Uddate(int id, string brand)
+        public Task<bool?> Update(int id, string brand)
         {
             return ExecuteSafeAsync(() => _catalogBrandRepository.UpdateAsync(id, brand));
         }

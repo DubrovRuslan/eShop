@@ -34,7 +34,7 @@ public class CatalogItemController : ControllerBase
     [ProducesResponseType(typeof(ChangeItemResponse<bool?>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> Update(UpdateProductRequest request)
     {
-        var result = await _catalogItemService.Uddate(request.Id, request.Name, request.Description, request.Price, request.AvailableStock, request.CatalogBrandId, request.CatalogTypeId, request.PictureFileName);
+        var result = await _catalogItemService.Update(request.Id, request.Name, request.Description, request.Price, request.AvailableStock, request.CatalogBrandId, request.CatalogTypeId, request.PictureFileName);
         return Ok(new ChangeItemResponse<bool?>() { Result = result });
     }
 

@@ -34,7 +34,7 @@ public class CatalogBrandController : ControllerBase
     [ProducesResponseType(typeof(ChangeBrandResponse<bool?>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> Update(UpdateBrandRequest request)
     {
-        var result = await _catalogBrandService.Uddate(request.Id, request.Brand);
+        var result = await _catalogBrandService.Update(request.Id, request.Brand);
         return Ok(new ChangeBrandResponse<bool?>() { Result = result });
     }
 

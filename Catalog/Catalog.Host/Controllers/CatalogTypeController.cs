@@ -34,7 +34,7 @@ public class CatalogTypeController : ControllerBase
     [ProducesResponseType(typeof(ChangeTypeResponse<bool?>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> Update(UpdateTypeRequest request)
     {
-        var result = await _catalogTypeService.Uddate(request.Id, request.Type);
+        var result = await _catalogTypeService.Update(request.Id, request.Type);
         return Ok(new ChangeTypeResponse<bool?>() { Result = result });
     }
 

@@ -23,7 +23,7 @@ public class CatalogItemService : BaseDataService<ApplicationDbContext>, ICatalo
         return ExecuteSafeAsync(() => _catalogItemRepository.AddAsync(name, description, price, availableStock, catalogBrandId, catalogTypeId, pictureFileName));
     }
 
-    public Task<bool?> Uddate(int id, string name, string description, decimal price, int availableStock, int catalogBrandId, int catalogTypeId, string pictureFileName)
+    public Task<bool?> Update(int id, string name, string description, decimal price, int availableStock, int catalogBrandId, int catalogTypeId, string pictureFileName)
     {
         return ExecuteSafeAsync(() => _catalogItemRepository.UpdateAsync(id, name, description, price, availableStock, catalogBrandId, catalogTypeId, pictureFileName));
     }
