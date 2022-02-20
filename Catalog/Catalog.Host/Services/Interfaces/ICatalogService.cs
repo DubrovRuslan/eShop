@@ -1,6 +1,6 @@
 using Catalog.Host.Models.Dtos;
+using Catalog.Host.Models.Enums;
 using Catalog.Host.Models.Response;
-using MVC.Models.Enums;
 
 namespace Catalog.Host.Services.Interfaces;
 

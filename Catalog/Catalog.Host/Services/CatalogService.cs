@@ -2,10 +2,10 @@ using AutoMapper;
 using Catalog.Host.Configurations;
 using Catalog.Host.Data;
 using Catalog.Host.Models.Dtos;
+using Catalog.Host.Models.Enums;
 using Catalog.Host.Models.Response;
 using Catalog.Host.Repositories.Interfaces;
 using Catalog.Host.Services.Interfaces;
-using MVC.Models.Enums;
 
 namespace Catalog.Host.Services;
 

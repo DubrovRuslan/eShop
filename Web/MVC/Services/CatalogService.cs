@@ -52,7 +52,7 @@ public class CatalogService : ICatalogService
         var list = new List<SelectListItem>();
         for (var i = 0; i < result.Count; i++)
         {
-            list.Add(new SelectListItem() { Value = $"{i + 1}", Text = result.Data.ElementAt(i).Brand });
+            list.Add(new SelectListItem() { Value = result.Data.ElementAt(i).Id.ToString(), Text = result.Data.ElementAt(i).Brand });
         }
 
         return list;
@@ -64,7 +64,7 @@ public class CatalogService : ICatalogService
         var list = new List<SelectListItem>();
         for (var i = 0; i < result.Count; i++)
         {
-            list.Add(new SelectListItem() { Value = $"{i + 1}", Text = result.Data.ElementAt(i).Type });
+            list.Add(new SelectListItem() { Value = result.Data.ElementAt(i).Id.ToString(), Text = result.Data.ElementAt(i).Type });
         }
 
         return list;

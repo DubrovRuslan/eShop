@@ -1,13 +1,9 @@
-using System.Net;
-using Catalog.Host.Data.Entities;
+using Catalog.Host.Configurations;
 using Catalog.Host.Models.Dtos;
+using Catalog.Host.Models.Enums;
 using Catalog.Host.Models.Requests;
 using Catalog.Host.Models.Response;
 using Catalog.Host.Services.Interfaces;
-using Infrastructure;
-using Microsoft.AspNetCore.Mvc;
-using MVC.Dtos;
-using MVC.Models.Enums;
 
 namespace Catalog.Host.Controllers;
 
