@@ -6,6 +6,8 @@ using Catalog.Host.Models.Response;
 using Catalog.Host.Services.Interfaces;
 using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using MVC.Dtos;
+using MVC.Models.Enums;
 
 namespace Catalog.Host.Controllers;
 
@@ -35,9 +37,9 @@ public class CatalogBffController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(PaginatedItemsResponse<CatalogItemDto>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items(PaginatedItemsRequest request)
+    public async Task<IActionResult> Items(PaginatedItemsRequest<CatalogTypeFilter> request)
     {
-        var result = await _catalogService.GetCatalogItemsAsync(request.PageSize, request.PageIndex);
+        var result = await _catalogService.GetCatalogItemsAsync(request.PageSize, request.PageIndex, request.Filters);
         return Ok(result);
     }
 
