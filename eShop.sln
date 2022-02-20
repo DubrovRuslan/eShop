@@ -22,6 +22,41 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.UnitTests", "Catalo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.UnitTests", "Infrastructure\Infrastructure.UnitTests\Infrastructure.UnitTests.csproj", "{941F602A-DC11-45C8-B060-04BB02C3E048}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proxy", "Proxy", "{30843637-2911-45E7-9B92-716A13895F06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{8A1BAC45-F337-4885-9E94-B31952EA553D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateway", "gateway", "{50998F05-2010-48D3-912F-522D23B1FE8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A035AF4E-DD0A-4E1D-A587-B7C1F61AE1DE}"
+	ProjectSection(SolutionItems) = preProject
+		Proxy\assets\images\1.png = Proxy\assets\images\1.png
+		Proxy\assets\images\10.png = Proxy\assets\images\10.png
+		Proxy\assets\images\11.png = Proxy\assets\images\11.png
+		Proxy\assets\images\12.png = Proxy\assets\images\12.png
+		Proxy\assets\images\13.png = Proxy\assets\images\13.png
+		Proxy\assets\images\14.png = Proxy\assets\images\14.png
+		Proxy\assets\images\2.png = Proxy\assets\images\2.png
+		Proxy\assets\images\3.png = Proxy\assets\images\3.png
+		Proxy\assets\images\4.png = Proxy\assets\images\4.png
+		Proxy\assets\images\5.png = Proxy\assets\images\5.png
+		Proxy\assets\images\6.png = Proxy\assets\images\6.png
+		Proxy\assets\images\7.png = Proxy\assets\images\7.png
+		Proxy\assets\images\8.png = Proxy\assets\images\8.png
+		Proxy\assets\images\9.png = Proxy\assets\images\9.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{0E9F797C-4C7B-4B31-9CA8-3209C5246A13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf.d", "conf.d", "{46D09A3D-6408-4D08-969A-06B307450EE5}"
+	ProjectSection(SolutionItems) = preProject
+		Proxy\gateway\nginx\conf.d\default.conf = Proxy\gateway\nginx\conf.d\default.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{76207F87-AFA3-406C-9F3E-B1A8025704F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "Web\MVC\MVC.csproj", "{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +79,10 @@ Global
 		{941F602A-DC11-45C8-B060-04BB02C3E048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{941F602A-DC11-45C8-B060-04BB02C3E048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{941F602A-DC11-45C8-B060-04BB02C3E048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +92,12 @@ Global
 		{C877F308-7870-433C-AA13-DE7DBC3675B9} = {A6C7B2CD-2199-497C-9EF5-32274390D2D7}
 		{39EC07F0-1BCF-43B4-9194-27CD45DB950E} = {E769E2A0-66AF-44D6-9300-C45D3889E06A}
 		{941F602A-DC11-45C8-B060-04BB02C3E048} = {A6C7B2CD-2199-497C-9EF5-32274390D2D7}
+		{8A1BAC45-F337-4885-9E94-B31952EA553D} = {30843637-2911-45E7-9B92-716A13895F06}
+		{50998F05-2010-48D3-912F-522D23B1FE8B} = {30843637-2911-45E7-9B92-716A13895F06}
+		{A035AF4E-DD0A-4E1D-A587-B7C1F61AE1DE} = {8A1BAC45-F337-4885-9E94-B31952EA553D}
+		{0E9F797C-4C7B-4B31-9CA8-3209C5246A13} = {50998F05-2010-48D3-912F-522D23B1FE8B}
+		{46D09A3D-6408-4D08-969A-06B307450EE5} = {0E9F797C-4C7B-4B31-9CA8-3209C5246A13}
+		{6F8A74B6-319B-4DE5-8C85-75F6D6B111FF} = {76207F87-AFA3-406C-9F3E-B1A8025704F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51196A95-E211-4500-95CD-99E19AB5E7FD}
